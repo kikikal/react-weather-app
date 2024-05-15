@@ -9,6 +9,7 @@ export default function ReactWeatherApp() {
   }
   function searchForCity(event) {
     event.preventDefault();
+    let searchedCity = { city };
   }
 
   return (
@@ -27,7 +28,7 @@ export default function ReactWeatherApp() {
         />
       </form>
 
-      <WeatherData city={city} />
+      <WeatherData city={searchedCity} />
     </div>
   );
 }

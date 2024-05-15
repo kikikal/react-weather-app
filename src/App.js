@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="container">
       <div className="App">
-        <ReactWeatherApp />
-        <p>
+        <ReactWeatherApp defaultCity="Melbourne" />
+        <p className="small">
           This project was coded by{" "}
           <a href="https://github.com/kikikal" target="_blank" rel="noreferrer">
             Christina Kalyvas

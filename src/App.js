@@ -7,9 +7,15 @@ function App() {
       <div className="App">
         <ReactWeatherApp />
         <p>
-          This project was coded by <a href="/">Christina Kalyvas</a> and is
-          <a href="/">open-sourced on Github</a> and{" "}
-          <a href="/">hosted on Netlify</a>
+          This project was coded by{" "}
+          <a href="https://github.com/kikikal">Christina Kalyvas</a> and is{" "}
+          <a href="https://github.com/kikikal/react-weather-app">
+            open-sourced on Github
+          </a>{" "}
+          and{" "}
+          <a href="https://react-weather-app-ck.netlify.app/">
+            hosted on Netlify
+          </a>
         </p>
       </div>
     </div>

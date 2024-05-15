@@ -1,0 +1,16 @@
+.ReactWeatherApp {
+  font-family: arial, sans-serif;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+  padding: 20px;
+
+}
+
+.ReactWeatherApp form {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}

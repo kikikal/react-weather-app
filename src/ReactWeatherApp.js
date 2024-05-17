@@ -18,7 +18,6 @@ export default function ReactWeatherApp(props) {
       ready: true,
       currentDate: new Date(response.data.time * 1000),
     });
-    console.log(data.currentDate);
   }
 
   function updateSearchValue(event) {

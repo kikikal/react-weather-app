@@ -16,11 +16,7 @@
   font-weight: 400;
 }
 
-.WeatherData .temp {
-  font-size: 48px;
-  color: #202124;
-  font-weight: 400;
-}
+
 
 .WeatherData img {
   position: relative;
@@ -29,7 +25,4 @@
   margin-right: 10px;
 }
 
-.WeatherData .unit {
-  position: relative;
-  top: -22px;
-}
+

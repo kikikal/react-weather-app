@@ -4,7 +4,7 @@ import WeatherForecastReturn from "./WeatherForecastReturn";
 
 export default function WeatherForecast(props) {
   const [ready, setReady] = useState(false);
-  const [forecastData, setForecastData] = useState("");
+  const [forecastData, setForecastData] = useState(null);
 
   useEffect(() => {
     setReady(false);
@@ -12,7 +12,6 @@ export default function WeatherForecast(props) {
 
   function changeData(response) {
     setForecastData(response.data.daily);
-    console.log(response);
     setReady(true);
   }
 
@@ -23,7 +22,9 @@ export default function WeatherForecast(props) {
   }
 
   if (ready) {
-    return <WeatherForecastReturn dailyData={forecastData} coords={props.coords} />;
+    return (
+      <WeatherForecastReturn dailyData={forecastData} coords={props.coords} />
+    );
   } else {
     runApi();
   }

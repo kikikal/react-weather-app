@@ -9,7 +9,6 @@ export default function ReactWeatherApp(props) {
   const [data, setData] = useState({ ready: false });
 
   function getData(response) {
-    console.log(response);
     setData({
       city: response.data.name,
       temperature: response.data.main.temp,

@@ -1,0 +1,13 @@
+.WeatherForecastReturn {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.WeatherForecastReturn img {
+  width: 60px;
+}
+
+.WeatherForecastReturn .min,
+.WeatherForecastReturn .day {
+  color: #70757a;
+}

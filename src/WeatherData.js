@@ -16,15 +16,17 @@ export default function WeatherData(props) {
       <div className="row">
         <div className="col-6">
           <span>
-            <img src={`http://openweathermap.org/img/wn/${props.data.iconUrl}@2x.png`} alt={props.data.description} />
+            <img
+              src={`http://openweathermap.org/img/wn/${props.data.iconUrl}@2x.png`}
+              alt={props.data.description}
+            />
           </span>
           <Temperature celsius={props.data.temperature} />
-
         </div>
         <div className="col-6">
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind: {props.data.wind} km/h</li>
+            <li>Wind: {props.data.wind.speed} km/h</li>
           </ul>
         </div>
       </div>

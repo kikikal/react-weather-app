@@ -11,6 +11,7 @@ export default function DateSet(props) {
     "Saturday",
   ];
   let weekday = weekdays[props.currentDate.getDay()];
+
   let minute = props.currentDate.getMinutes();
   if (minute < 10) {
     minute = `0${minute}`;

@@ -53,7 +53,7 @@ export default function ReactWeatherApp(props) {
           />
         </form>
         <WeatherData data={data} />
-        <WeatherForecast coords={data.coords} />
+        <WeatherForecast coords={data.coords} tzOffset={data.tzOffset} />
       </div>
     );
   } else {

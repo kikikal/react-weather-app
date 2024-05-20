@@ -11,7 +11,7 @@ export default function WeatherForecast(props) {
   }, [props.coords]);
 
   function changeData(response) {
-    setForecastData(response.data.daily);
+    setForecastData(response.data);
     setReady(true);
   }
 
@@ -23,7 +23,10 @@ export default function WeatherForecast(props) {
 
   if (ready) {
     return (
-      <WeatherForecastReturn dailyData={forecastData} coords={props.coords} />
+      <WeatherForecastReturn
+        dailyData={forecastData.daily}
+        timezone={forecastData.timezone}
+      />
     );
   } else {
     runApi();

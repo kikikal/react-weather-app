@@ -2,8 +2,9 @@ import React from "react";
 import "./WeatherForecastReturn.css";
 import moment from "moment-timezone";
 
-export default function WeatherForecastReturn(props) {
 
+
+export default function WeatherForecastReturn(props) {
   return (
     <span className="WeatherForecastReturn row">
       {props.dailyData.map(function (day, index) {
@@ -11,7 +12,10 @@ export default function WeatherForecastReturn(props) {
           return (
             <span className="col" key={index}>
               <div className="day">
-                {moment.tz(props.timezone).add(index+1, "days").format("ddd")}
+                {moment
+                  .tz(props.timezone)
+                  .add(index + 1, "days")
+                  .format("ddd")}
               </div>
               <img
                 src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}

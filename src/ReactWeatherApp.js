@@ -7,6 +7,11 @@ import WeatherForecast from "./WeatherForecast";
 export default function ReactWeatherApp(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [data, setData] = useState({ ready: false });
+  const [timezone, setTimezone] = useState(null);
+
+  function updateData(response) {
+    setTimezone(response.data.timezone);
+  }
 
   function getData(response) {
     setData({
@@ -20,6 +25,10 @@ export default function ReactWeatherApp(props) {
       currentDate: new Date(response.data.dt * 1000),
       coords: response.data.coord,
     });
+
+    let apiKey = `c119ffef35b7245a5e03b6e5724ae961`;
+    let timezoneUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
+    axios.get(timezoneUrl).then(updateData);
   }
 
   function updateSearchValue(event) {
@@ -27,7 +36,9 @@ export default function ReactWeatherApp(props) {
   }
   function submitCity(event) {
     event.preventDefault();
-    runAxios();
+    if (city) {
+      runAxios();
+    }
   }
 
   function runAxios() {
@@ -52,7 +63,7 @@ export default function ReactWeatherApp(props) {
             className="col-3 bg-primary border-1 border-primary text-light rounded p-2"
           />
         </form>
-        <WeatherData data={data} />
+        <WeatherData data={data} timezone={timezone} />
         <WeatherForecast coords={data.coords} tzOffset={data.tzOffset} />
       </div>
     );

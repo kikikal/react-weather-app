@@ -9,7 +9,7 @@ export default function WeatherData(props) {
       <h1>{props.data.city}</h1>
       <ul>
         <li>
-          <DateSet currentDate={props.data.currentDate} />
+          <DateSet timezone={props.timezone} />
         </li>
         <li>{props.data.description}</li>
       </ul>
